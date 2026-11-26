@@ -8,7 +8,7 @@
 <style>/*
 Theme Name: One Alpha
 Description: Illustrated corporate block theme for 1.Alpha Employment Agency.
-Version: 0.7.0
+Version: 0.7.1
 Requires at least: 6.7
 Requires PHP: 7.4
 Text Domain: one-alpha
@@ -290,6 +290,31 @@ body > #content,.wp-site-blocks > .site-main { flex: 1; }
 .visit-form button { justify-self: start; cursor: pointer; }
 @media (max-width: 980px) { .visit-fields { grid-template-columns: 1fr; } }
 @media (max-width: 700px) { .visit-desk { grid-template-columns: 1fr; gap: 32px; } }
+
+.whatsapp-float { margin: 0; }
+body:not(.editor-styles-wrapper) footer .whatsapp-float {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 8;
+  margin: 0;
+}
+.whatsapp-float a {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #11734d;
+  box-shadow: 0 3px 12px rgb(20 43 77 / 22%);
+}
+.whatsapp-float a:hover { background: #095d3d; }
+.whatsapp-float img { display: block; width: 32px; height: 32px; }
+footer:has(.whatsapp-float) .foot { padding-right: calc(62px + env(safe-area-inset-right)); }
+@media print {
+  footer .whatsapp-float { display: none; }
+}
 </style>
 </head>
 <body>
@@ -346,6 +371,7 @@ body > #content,.wp-site-blocks > .site-main { flex: 1; }
 <p class="agency-channels"><a href="https://wa.me/6588832566">WhatsApp</a> · <a href="https://share.google/g4wVaBkf0hohQL4WG">Google business profile</a></p>
 <p><a href="#page-top">Back to top</a></p>
 </div>
+<figure class="wp-block-image size-full whatsapp-float"><a href="https://wa.me/6588832566"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0gMTIuMDExNzE5IDIgQyA2LjUwNTcxODcgMiAyLjAyMzQ4NDQgNi40NzgzNzUgMi4wMjE0ODQ0IDExLjk4NDM3NSBDIDIuMDIwNDg0NCAxMy43NDQzNzUgMi40ODE0Njg3IDE1LjQ2MjU2MyAzLjM1NTQ2ODggMTYuOTc2NTYyIEwgMiAyMiBMIDcuMjMyNDIxOSAyMC43NjM2NzIgQyA4LjY5MTQyMTkgMjEuNTU5NjcyIDEwLjMzMzg1OSAyMS45Nzc1MTYgMTIuMDA1ODU5IDIxLjk3ODUxNiBMIDEyLjAwOTc2NiAyMS45Nzg1MTYgQyAxNy41MTQ3NjYgMjEuOTc4NTE2IDIxLjk5NTA0NyAxNy40OTkxNDEgMjEuOTk4MDQ3IDExLjk5NDE0MSBDIDIyLjAwMDA0NyA5LjMyNTE0MDYgMjAuOTYyMTcyIDYuODE1NzM0NCAxOS4wNzYxNzIgNC45Mjc3MzQ0IEMgMTcuMTkwMTcyIDMuMDQwNzM0NCAxNC42ODM3MTkgMi4wMDEgMTIuMDExNzE5IDIgeiBNIDEyLjAwOTc2NiA0IEMgMTQuMTQ1NzY2IDQuMDAxIDE2LjE1MzEwOSA0LjgzMzc5NjkgMTcuNjYyMTA5IDYuMzQxNzk2OSBDIDE5LjE3MTEwOSA3Ljg1MTc5NjkgMjAuMDAwMDQ3IDkuODU4MTg3NSAxOS45OTgwNDcgMTEuOTkyMTg4IEMgMTkuOTk2MDQ3IDE2LjM5NjE4NyAxNi40MTM4MTIgMTkuOTc4NTE2IDEyLjAwNzgxMiAxOS45Nzg1MTYgQyAxMC42NzQ4MTIgMTkuOTc3NTE2IDkuMzU0NDA2MiAxOS42NDI4MTIgOC4xOTE0MDYyIDE5LjAwNzgxMiBMIDcuNTE3NTc4MSAxOC42NDA2MjUgTCA2Ljc3MzQzNzUgMTguODE2NDA2IEwgNC44MDQ2ODc1IDE5LjI4MTI1IEwgNS4yODUxNTYyIDE3LjQ5NjA5NCBMIDUuNTAxOTUzMSAxNi42OTUzMTIgTCA1LjA4Nzg5MDYgMTUuOTc2NTYyIEMgNC4zODk4OTA2IDE0Ljc2ODU2MiA0LjAyMDQ4NDQgMTMuMzg3Mzc1IDQuMDIxNDg0NCAxMS45ODQzNzUgQyA0LjAyMzQ4NDQgNy41ODIzNzUgNy42MDY3NjU2IDQgMTIuMDA5NzY2IDQgeiBNIDguNDc2NTYyNSA3LjM3NSBDIDguMzA5NTYyNSA3LjM3NSA4LjAzOTU0NjkgNy40Mzc1IDcuODEwNTQ2OSA3LjY4NzUgQyA3LjU4MTU0NjkgNy45MzY1IDYuOTM1NTQ2OSA4LjUzOTU3ODEgNi45MzU1NDY5IDkuNzY3NTc4MSBDIDYuOTM1NTQ2OSAxMC45OTU1NzggNy44MzAwNzgxIDEyLjE4MjYwOSA3Ljk1NTA3ODEgMTIuMzQ5NjA5IEMgOC4wNzkwNzgxIDEyLjUxNTYwOSA5LjY4MTc1IDE1LjExNTIzNCAxMi4yMTg3NSAxNi4xMTUyMzQgQyAxNC4zMjY3NSAxNi45NDYyMzQgMTQuNzU0ODkxIDE2Ljc4MjIzNCAxNS4yMTI4OTEgMTYuNzQwMjM0IEMgMTUuNjcwODkxIDE2LjY5OTIzNCAxNi42OTA0MzggMTYuMTM3Njg3IDE2Ljg5ODQzOCAxNS41NTQ2ODggQyAxNy4xMDY0MzcgMTQuOTcxNjg3IDE3LjEwNjkyMiAxNC40NzAxODcgMTcuMDQ0OTIyIDE0LjM2NzE4OCBDIDE2Ljk4MjkyMiAxNC4yNjMxODggMTYuODE2NDA2IDE0LjIwMTE3MiAxNi41NjY0MDYgMTQuMDc2MTcyIEMgMTYuMzE3NDA2IDEzLjk1MTE3MiAxNS4wOTAzMjggMTMuMzQ4NjI1IDE0Ljg2MTMyOCAxMy4yNjU2MjUgQyAxNC42MzIzMjggMTMuMTgyNjI1IDE0LjQ2NDgyOCAxMy4xNDA2MjUgMTQuMjk4ODI4IDEzLjM5MDYyNSBDIDE0LjEzMjgyOCAxMy42NDA2MjUgMTMuNjU1NzY2IDE0LjIwMTE4NyAxMy41MDk3NjYgMTQuMzY3MTg4IEMgMTMuMzYzNzY2IDE0LjUzNDE4OCAxMy4yMTg3NSAxNC41NTY2NDEgMTIuOTY4NzUgMTQuNDMxNjQxIEMgMTIuNzE4NzUgMTQuMzA1NjQxIDExLjkxNDkzOCAxNC4wNDE0MDYgMTAuOTYwOTM4IDEzLjE5MTQwNiBDIDEwLjIxODkzNyAxMi41MzA0MDYgOS43MTgyNjU2IDExLjcxNDg0NCA5LjU3MjI2NTYgMTEuNDY0ODQ0IEMgOS40MjcyNjU2IDExLjIxNTg0NCA5LjU1ODU5MzggMTEuMDc5MDc4IDkuNjgzNTkzOCAxMC45NTUwNzggQyA5Ljc5NTU5MzggMTAuODQzMDc4IDkuOTMxNjQwNiAxMC42NjM1NzggMTAuMDU2NjQxIDEwLjUxNzU3OCBDIDEwLjE4MDY0MSAxMC4zNzE1NzggMTAuMjIzNjQxIDEwLjI2NzU2MiAxMC4zMDY2NDEgMTAuMTAxNTYyIEMgMTAuMzg5NjQxIDkuOTM1NTYyNSAxMC4zNDcxNTYgOS43ODkwNjI1IDEwLjI4NTE1NiA5LjY2NDA2MjUgQyAxMC4yMjMxNTYgOS41MzkwNjI1IDkuNzM3NjI1IDguMzA2NSA5LjUxNTYyNSA3LjgxMjUgQyA5LjMyODYyNSA3LjM5NzUgOS4xMzExMjUgNy4zODc4NTk0IDguOTUzMTI1IDcuMzgwODU5NCBDIDguODA4MTI1IDcuMzc0ODU5NCA4LjY0MjU2MjUgNy4zNzUgOC40NzY1NjI1IDcuMzc1IHoiLz48L3N2Zz4K" alt="Chat with 1.Alpha on WhatsApp"/></a></figure>
 </footer>
 <script>
 document.querySelectorAll('.visit-form').forEach(function (form) {
