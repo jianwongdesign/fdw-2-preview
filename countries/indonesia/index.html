@@ -8,7 +8,7 @@
 <style>/*
 Theme Name: One Alpha
 Description: Illustrated corporate block theme for 1.Alpha Employment Agency.
-Version: 0.5.1
+Version: 0.6.0
 Requires at least: 6.7
 Requires PHP: 7.4
 Text Domain: one-alpha
@@ -228,8 +228,8 @@ section[id] { scroll-margin-top: 20px; }
 }
 .about-story p { max-width: 62ch; margin-top: 18px; }
 .about-image img { display: block; width: 100%; }
-.home-paths,.route-links { display: flex; flex-wrap: wrap; gap: 16px 36px; padding-block: 32px; }
-.home-paths a,.route-links a,.country-page .inline-action a,.origin-entry h3 a {
+.route-links { display: flex; flex-wrap: wrap; gap: 16px 36px; padding-block: 32px; }
+.route-links a,.country-page .inline-action a,.origin-entry h3 a {
   color: var(--blue);
   font-weight: 600;
   text-decoration-thickness: 1px;
@@ -246,7 +246,7 @@ section[id] { scroll-margin-top: 20px; }
 .main-nav .current-menu-item > a { color: var(--blue); text-decoration: underline; }
 @media (max-width: 700px) {
   .about-spread { grid-template-columns: 1fr; gap: 24px; }
-  .home-paths,.route-links { flex-direction: column; }
+  .route-links { flex-direction: column; }
 }
 
 body:has(> .preview-header),.wp-site-blocks:has(> .site-main) {
@@ -258,6 +258,21 @@ body > #content,.wp-site-blocks > .site-main { flex: 1; }
 .contact-band { background: var(--light); }
 .contact-lead > p { margin-top: 14px; max-width: 38ch; }
 .contact-info { align-self: center; }
+
+.home-guide h3 + p { margin-top: 10px; max-width: 62ch; }
+.home-guide p + h3 { margin-top: 30px; }
+.home-visit { display: grid; grid-template-columns: 1.4fr 1fr; margin-bottom: clamp(32px,5vw,76px); }
+.home-review,.home-office { padding: clamp(26px,4vw,62px); }
+.home-review { background: var(--blue); color: white; }
+.home-office { background: var(--light); }
+.home-visit h2 { font-size: clamp(1.65rem,2.6vw,2.55rem); }
+.home-visit p { margin-top: 16px; }
+.home-review blockquote { margin: 24px 0; border: 0; padding: 0; }
+.home-review blockquote p { max-width: 32ch; font-size: clamp(1.4rem,2.1vw,2rem); line-height: 1.3; }
+.home-review cite { display: block; margin-top: 12px; font-style: normal; }
+@media (max-width: 700px) {
+  .home-visit { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
