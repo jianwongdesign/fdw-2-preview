@@ -8,7 +8,7 @@
 <style>/*
 Theme Name: One Alpha
 Description: Illustrated corporate block theme for 1.Alpha Employment Agency.
-Version: 0.4.1
+Version: 0.4.2
 Requires at least: 6.7
 Requires PHP: 7.4
 Text Domain: one-alpha
@@ -108,6 +108,14 @@ section[id] { scroll-margin-top: 20px; }
 .agency-panel .inline-action { margin-top: 14px; font-weight: 600; }
 .agency-panel .licence-line { width: 100%; max-width: none; margin-top: auto; padding-top: 26px; font-size: .8rem; letter-spacing: .025em; color: #e6eefc; }
 .chapter,.contact { display: grid; grid-template-columns: minmax(0,.82fr) minmax(0,1.3fr); gap: 10%; padding-block: clamp(54px,6.6vw,104px); }
+@media (width > 700px) {
+  .chapter > :first-child,
+  .contact > .contact-lead {
+    position: sticky;
+    top: calc(var(--wp-admin--admin-bar--height, 0px) + 24px);
+    align-self: start;
+  }
+}
 .service-row { display: grid; grid-template-columns: minmax(0,.78fr) minmax(0,1.22fr); gap: 8%; border-top: 1px solid var(--rule); padding-block: 23px; }
 .service-row:last-child { border-bottom: 1px solid var(--rule); }
 .service-row p,.questions p { max-width: 65ch; }
