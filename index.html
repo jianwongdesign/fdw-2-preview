@@ -8,7 +8,7 @@
 <style>/*
 Theme Name: One Alpha
 Description: Illustrated corporate block theme for 1.Alpha Employment Agency.
-Version: 0.4.0
+Version: 0.4.1
 Requires at least: 6.7
 Requires PHP: 7.4
 Text Domain: one-alpha
@@ -137,7 +137,9 @@ section[id] { scroll-margin-top: 20px; }
 .origins-heading > p { max-width: 44ch; }
 .origin-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 5%; margin-top: 34px; }
 .origin-entry { border-top: 1px solid var(--rule); padding-top: 18px; }
-.origin-entry h3 { margin-bottom: 10px; }
+.origin-title { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.origin-title .origin-flag { flex: none; margin: 0; }
+.origin-flag img { display: block; width: auto; height: 25px; outline: 1px solid rgb(20 43 77 / 14%); }
 .feedback-band { background: var(--blue); color: white; }
 .feedback-intro p,.guide-heading p { margin-top: 20px; }
 .featured-feedback { font-size: clamp(1.4rem,2.45vw,2.4rem); line-height: 1.3; letter-spacing: -.025em; }
@@ -254,15 +256,24 @@ section[id] { scroll-margin-top: 20px; }
 </div>
 <div class="wp-block-group origin-list">
 <div class="wp-block-group origin-entry">
+<div class="wp-block-group origin-title">
+<figure class="wp-block-image size-full origin-flag"><img src="data:image/webp;base64,UklGRjYAAABXRUJQVlA4TCoAAAAvn4AaABcgEEhC33yN+RcQFE333PyHbgkIJG1WciUf9QFGRP+TjNjNjAA=" alt=""/></figure>
 <h3 class="wp-block-heading">Indonesia</h3>
+</div>
 <p>Our network includes Yogyakarta, Cilacap, Semarang, Surabaya and Malang. If your family speaks Malay or Bahasa Indonesia, try a conversation together during the interview.</p>
 </div>
 <div class="wp-block-group origin-entry">
+<div class="wp-block-group origin-title">
+<figure class="wp-block-image size-full origin-flag"><img src="data:image/webp;base64,UklGRlACAABXRUJQVlA4TEMCAAAvn4AaAO/AJgCANOhPBm7CUISsROB0Z641lAQAkGAdvvA/+gGHbA9cbSRbSUQLlEmhFOCe/f+BSDKb//j/f66lkI0hcFfmmtM+mxGdvYHmlL0BAD5ujxugB6B7S/538XXmVPYi/5r4huVv4H9CfOg9igaaCZIvFHIKWLLttm1IWyViiiTX1P0v1BJpFuAzgwdE9H8CPv4b/2bc+QN3PJhjDsabP4c/3hwdjDVvAGCc+Xv448zxwRjzhk3jy++W8OW4ZWx5w65x5XdPuHLcM6a8I9J48hsjLfluaBcj2tDX0MzJxXoJzdR26BgFZQj6uJ4jLpEhLynGDu1TBnbApXp2WBKMG0OaUjS4ZmqrYL4N3kKzIF0LZAoNA4b6NBRenpqvy1toHVT6mnoJ7QMw1qOhwjpgvg5vgQpV6WvoJRCiOpan4VUpAaQrS6ZQax3bMpSkod6aAPOleAtEQboyZApkAUMJGuquDuZzeQvEqXR5ZArUAWMeDQzo8ggDJpdZyNMxl5KHPldPnYrL7YU4jNmgxGmfrycOrsDqvj7r/inBPuvW+63uOW1G2mJ1S2VXn+JPZoIUr5SdXOLhYmYGTYBQtiSobV+XBKXMR/mTRQqiPGFnFztfLBpzDIQujVlvqdc1ZqHL7x3O9kTRPSXrjN35ak9V7ECIkmVnvT193VGi7LChZ8souqFEnfE4Xy3nXfGAM00LAH+yexYzOcEBK00HQC9WINRBSToDy9WK1AUQilZ/vt3LMDthpUgvVjCUIir/QQUA" alt=""/></figure>
 <h3 class="wp-block-heading">Myanmar</h3>
+</div>
 <p>Our partners recruit in Yangon, Sagaing, Kachin, Kayin and Shan. If school pick-ups, shopping or cooking are part of your day, ask about similar routines she has handled.</p>
 </div>
 <div class="wp-block-group origin-entry">
+<div class="wp-block-group origin-title">
+<figure class="wp-block-image size-full origin-flag"><img src="data:image/webp;base64,UklGRtACAABXRUJQVlA4TMQCAAAvn8ATANegJpKtpkIB/oVgBLqcul+SfrLBtpEkRe2dLv/kGFx28YFRAABm+te6Frat6bX5D/3/e3+MyIiCmfB3kAh/D3GQgP6K6YSLHVCRRFhIPU7akp9I3JLrwIwH5A/kV3dHUctKF8CSbbdtQ7MBJJHq7v2vlKZISAned0T/ITiS5CiKxkNvcbZnV7zg8nyBK+eu8LiPOzrOXR7QjDee6LjTDZx3xgOX3PkhAxVmT2V4wfUJ6kJE0ibjjkisnZ9lwJFr62pw27o88bTVFlMabTLQIHLb2maAkfwEngy3oy5PdNzpBs6w4oNDlYHOqWdgsDMDgAOa0HG9CQ+KblHXJxheqmLUQkFeSkiKDCBKlwhDhv75xnm8WGfYJsWP6+OUKtGwmMrsW1lkmFaFQ3kLuRAPmdVX4WWGYb4IJRruch4COBRhb7ppdfYsmcNMTiwUiiLjZvUi1ciS2EWq0gp5TyQp1e2IsJnhVnc555aKjNVKbolJPWofRjeUmGRamaeP2szQTNQ6x3tXfCZFmWteL4Xhf5wlmYYvlRckO+di5rQQggstbkatHT6kTJTbSslEOYbl715rVeIkw4bcai3MRLJSiZhLbS2uf/kqxe3/OHi+z/+5FHfq8Xe+fs//2v6XJN1L4vslYfDZb/1vuzdUd2/o53w2x5dD5sIsxJ7EeT4WEkeNWYgFf7MumYSYcMy6Lqi6eohBvvgimY5YF5++znZq935FCUXYa7oM2b9fVjT7Zb3Lkj/Yr/0+n41RFgX1cYEeYs3e4yqaEHv2HpdShMDgvFTVEEXCUVQMUSSUIVCoQqBQhVh2TBc0n73LuANCkNCt3gDYGYJD8souIIhU/8tQUH6upYcgkWsTkRbmIUhMPlc1D4Fi8rm0WQggXDyV7eoNkuyc85sQROYhiMyHKC5jFyqT1Rsyp34Lmh4CTQ/B5gw=" alt=""/></figure>
 <h3 class="wp-block-heading">The Philippines</h3>
+</div>
 <p>Our network includes Manila, Davao, Cebu, Cagayan de Oro and Bacoor. Discuss how you’ll communicate at home and ask about her experience caring for children or older family members.</p>
 </div>
 </div>
